@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{% block result %}
+<div>
+    <div>
+        <h1 style="color:black; text-align: center;">Crop Prediction System</h1>
+    </div><br><br>
+    <div class="container" style="height: 3px;">
+        <a href="/ff"><button class="btn btn-primary btn-lg float-right mt-2">Form</button></a>
+        <a href="/"><button class="btn btn-primary btn-lg float-left mt-2">Main</button></a><br>
+    </div><br>
+    <div class="container col-md-3" style="opacity: 0.8; ">
+        <div class="card" style="width: 15rem; padding: 0%; ">
+            <div class="card-body" style="text-align: center; background-color: #EA74F5 ;">
+                <h2 style="color:black; font-size: 23px;"><b><u>Final Result : </u></b><br>
+                    <span style="color:blue; font-size: 18px;">{{rrr}}</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+ {%endblock%}

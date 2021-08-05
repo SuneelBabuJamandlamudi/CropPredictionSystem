@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block form%}
+
+<div style="overflow-x: hidden;">
+    <div>
+        <h1 style="color:black; text-align: center;">Crop Prediction System</h1>
+    </div>
+    <div class="container">
+        <a href="/"><button class="btn btn-primary btn-lg float-right mt-3">Main</button></a><br>
+    </div>
+    <div class="container col-xs-5 col-md-4 mt-5" style="padding-left:3px; opacity: 0.8;">
+        <div class="card" style="width: 17rem; font-size:15px; background-color:#78EEF3 ;">
+            <div class="card-header">
+                <h3>Data Taking For Predection</h3>
+            </div>
+            <div class="card-body" style="width: 18rem; padding-left:4px;">
+                <form action="/predict" method="POST">
+                    <div class="form-group">
+                        <label for="name"><b>Last Crop Name</b></label> <br>
+                        <table>
+                            <tr>
+                                <td><input type="radio" required name="name" value="0" required><label for="Wheat">Wheat</label></td>
+                                <td><input type="radio" required name="name" value="1" ><label for="Rice">Rice</label></td>
+                                <td><input type="radio" required name="name" value="2" ><label for="Maize">Maize</label></td>
+                            </tr>
+                            <tr>                                
+                                <td><input type="radio" required name="name" value="3" ><label for="GreenGram">GreenGram</label></td>
+                                <td><input type="radio" required name="name" value="4" ><label for="Pea">Pea</label></td>
+                                <td><input type="radio" required name="name" value="5" ><label for="PigeonPea">PigeonPea</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" required name="name" value="6" ><label for="Sunflower">Sunflower</label></td>
+                                <td><input type="radio" required name="name" value="7" ><label for="Onion">Onion</label></td>
+                                <td><input type="radio" required name="name" value="8" ><label for="Millet">Millet</label></td>                                
+                            </tr>
+                            <tr>
+                                <td><input type="radio" required name="name" value="9" ><label for="Potato">Potato</label></td>
+                                <td><input type="radio" required name="name" value="10" ><label for="Sugarcane">Sugarcane</label></td>
+                                <td><input type="radio" required name="name" value="11" ><label for="Cotton">Cotton</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" required name="name" value="12" ><label for="SoyaBean">SoyaBean</label></td>
+                                <td><input type="radio" required name="name" value="13" ><label for="Tomato">Tomato</label></td>                               
+                            </tr>
+                        </table>          
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pH"><b>pH</b></label><br>
+                        <input type="number" name="pH" placeholder="Enter pH value" class="form-control" step="0.1" min="1" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="temp"><b>Temperature</b></label><br>
+                        <input type="number" name="temp" placeholder="Enter Temperature value" class="form-control" min="1" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rainfall"><b>Rainfall</b></label><br>
+                        <input type="number" name="rainfall" placeholder="Enter Rainfall value" class="form-control" min="1" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pH"><b>Relative Humidity</b></label><br>
+                        <input type="number" name="humidity" placeholder="Enter Relative Humidity value" class="form-control" min="1" max="100" required>
+                    </div>
+
+                    <div class="container">
+                        <button class="btn btn-success btn-lg" type="submit">Submit</button>
+                        <button class="btn btn-warning btn-lg float-right" type="reset">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+  </div>
+
+{% endblock%}
